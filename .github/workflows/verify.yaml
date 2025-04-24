@@ -1,0 +1,29 @@
+name: verify
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        project: []
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Cannon
+        run: npm install -g @usecannon/cli
+
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: 1.0.0
+
+      - name: verifying ${{ matrix.project }}
+        working-directory: ${{ matrix.project }}
+        run: make
+        env:
+          ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
+          ETH_RPC_URL: ${{ secrets.ETH_RPC_URL }}
