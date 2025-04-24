@@ -1,0 +1,30 @@
+name = "alchemy-light-account"
+version = "2.0.0"
+description = "Alchemy Light Account"
+
+[var.Settings]
+owner = "0xDdF32240B4ca3184De7EC8f0D5Aba27dEc8B7A5C"
+
+[pull.entrypoint]
+source = "eth-infinitism-entrypoint:0.7.0"
+
+[deploy.LightAccountFactory]
+artifact = "LightAccountFactory"
+args = ["<%= settings.owner %>", "<%= entrypoint.EntryPoint.address %>"]
+create2 = true
+salt = "0x00000000000000000000000000000000000000005f1ffd9d31306e056bcc959b"
+ifExists = "continue"
+
+[deploy.MultiOwnerLightAccountFactory]
+artifact = "MultiOwnerLightAccountFactory"
+args = ["<%= settings.owner %>", "<%= entrypoint.EntryPoint.address %>"]
+create2 = true
+salt = "0x0000000000000000000000000000000000000000bb3ab048b3f4ef2620ea0163"
+ifExists = "continue"
+
+[invoke.stake]
+target = "LightAccountFactory"
+func = "addStake(uint32,uint256)"
+args = [86400, "100000000000000000"]
+from = "<%= settings.owner %>"
+value = "100000000000000000"
