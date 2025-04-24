@@ -1,0 +1,13 @@
+name = "eth-infinitism-simple-account"
+version = "0.6.0"
+description = "SimpleAccount ERC-4337 infrastructure"
+
+[pull.entrypoint]
+source = "eth-infinitism-entrypoint:0.6.0"
+
+[deploy.SimpleAccountFactory]
+artifact = "SimpleAccountFactory"
+args = ["<%= entrypoint.EntryPoint.address %>"]
+create2 = true
+salt = "<%= zeroHash %>"
+ifExists = "continue"
