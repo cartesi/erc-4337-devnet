@@ -1,9 +1,27 @@
 # ERC-4337 devnet
 
-This repository contains copies of ERC-4337 infrastructure smart contracts that can be deployed to a local devnet (anvil), so developers can develop application locally before moving to testnet.
+This repository contains copies of ERC-4337 infrastructure smart contracts that can be deployed to a local devnet (anvil), so developers can develop application locally before moving to testnet or mainnet.
 
-The contracts are usually downloaded from verified deployments from ethereum, using the `forge clone` command. The foundry projects contains settings that try to match the deployed version settings, so the bytecodes match 100%.
+We understand that the most common ways of replicating live chains locally are:
 
-As most contracts use deterministic deployment, it's possible to deploy them locally to `anvil` and have the same address as they do on ethereum. This helps with developers, because they don't need to change application settings when moving from devnet to testnet to mainnet.
+- use `anvil` [forking capability](https://book.getfoundry.sh/guides/forking-mainnet-with-cast-anvil);
+- or use `anvil_setCode` method to force the bytecode into a specify address with the bytecode obtained from the live network.
 
-The local deployment is handled using [cannon](https://usecannon.com), a cool deployment tool.
+We however take a different approach.
+
+As most contracts use [deterministic deployment](https://book.getfoundry.sh/guides/deterministic-deployments-using-create2), we compile all smart contracts from source using the same settings as deployed to the live network, and deploy using the same salt, resulting in the same address.
+The contracts are usually downloaded from verified deployments from ethereum, using the `forge clone` command.
+
+The local deployment is handled using [cannon](https://usecannon.com), which provides more composability.
+
+## Contracts
+
+| Name | Version | Address | Original Repo | Cannon Package |
+| ---- | ------- | ------- | ------------- | -------------- |
+
+## Useful tools
+
+- forge clone --help
+- cast run --help
+- cast create2 --help
+- https://playground.sourcify.dev
