@@ -33,6 +33,7 @@ make
 - zerodev-kernel:3.1 ([source](https://github.com/zerodevapp/kernel/releases/tag/v3.1))
 - zerodev-kernel:3.2 ([source](https://github.com/zerodevapp/kernel/releases/tag/v3.2))
 - alchemy-light-account:1.1.0 ([source](https://github.com/alchemyplatform/light-account/releases/tag/v1.1.0))
+- alchemy-light-account:2.0.0 ([source](https://github.com/alchemyplatform/light-account/releases/tag/v2.0.0))
 
 ## Useful tools
 

@@ -1,0 +1,12 @@
+ds-test/=lib/forge-std/lib/ds-test/src/
+forge-std/=lib/forge-std/src/
+@openzeppelin/=lib/openzeppelin-contracts/
+account-abstraction/=lib/account-abstraction/contracts/
+modular-account/=lib/modular-account/src/
+@alchemy/light-account/=lib/modular-account/lib/light-account/
+@eth-infinitism/account-abstraction/=lib/modular-account/lib/account-abstraction/contracts/
+@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/
+erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/
+light-account/=lib/modular-account/lib/light-account/
+openzeppelin-contracts/=lib/openzeppelin-contracts/
+openzeppelin/=lib/modular-account/lib/openzeppelin-contracts/contracts/
