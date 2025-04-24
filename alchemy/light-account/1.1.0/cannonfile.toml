@@ -1,0 +1,13 @@
+name = "alchemy-light-account"
+version = "1.1.0"
+description = "Alchemy Light Account"
+
+[pull.entrypoint]
+source = "eth-infinitism-entrypoint:0.6.0"
+
+[deploy.LightAccountFactory]
+artifact = "LightAccountFactory"
+args = ["<%= entrypoint.EntryPoint.address %>"]
+create2 = true
+salt = "0x4e59b44847b379578588920ca78fbf26c0b4956c5528f3e2f146000008fabf77"
+ifExists = "continue"
