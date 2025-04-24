@@ -1,0 +1,9 @@
+name = "pimlico-entrypoint-simulations"
+version = "0.7.0"
+description = "Pimlico ERC-4337 infrastructure"
+
+[deploy.PimlicoEntryPointSimulations]
+artifact = "PimlicoEntryPointSimulations"
+create2 = true
+salt = "0x3132333400000000000000000000000000000000000000000000000000000000"
+ifExists = "continue"
