@@ -1,6 +1,7 @@
 FOUNDRY_VERSION := 1.0.0
 
 ORGS += eth-infinitism
+ORGS += pimlico
 
 .PHONY: all $(ORGS)
 
