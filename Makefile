@@ -1,5 +1,7 @@
 FOUNDRY_VERSION := 1.0.0
 
+ORGS += eth-infinitism
+
 .PHONY: all $(ORGS)
 
 all: $(ORGS)

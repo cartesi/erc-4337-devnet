@@ -24,6 +24,8 @@ make
 
 ## Cannon packages
 
+- eth-infinitism-entrypoint:0.6.0 ([source](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.6.0))
+
 ## Useful tools
 
 - forge clone --help
