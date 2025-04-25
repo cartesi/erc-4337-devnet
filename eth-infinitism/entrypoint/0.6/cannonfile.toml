@@ -1,0 +1,9 @@
+name = "eth-infinitism-entrypoint"
+version = "0.6.0"
+description = "ERC-4337 infrastructure"
+
+[deploy.EntryPoint]
+artifact = "EntryPoint"
+create2 = true
+salt = "<%= zeroHash %>"
+ifExists = "continue"
