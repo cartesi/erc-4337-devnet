@@ -4,34 +4,8 @@ on:
     branches: [main]
   pull_request:
 jobs:
-  list-projects:
-    runs-on: ubuntu-latest
-    outputs:
-      dirs: ${{ steps.list-directories.outputs.result }}
-      has_dirs: ${{ steps.list-directories.outputs.has_dirs }}
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/github-script@v7
-        id: list-directories
-        with:
-          script: |
-            const fs = require('fs');
-            const dirs = fs.readdirSync('.', { withFileTypes: true })
-              .filter(dirent => dirent.isDirectory())
-              .filter(dirent => !dirent.name.startsWith('.'))
-              .map(dirent => dirent.name);
-            const hasDirs = dirs.length > 0;
-            core.setOutput('has_dirs', hasDirs);
-            return JSON.stringify(dirs);
-          result-encoding: string
-
   verify:
-    needs: list-projects
-    if: needs.list-projects.outputs.has_dirs == 'true'
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        project: ${{ fromJson(needs.list-projects.outputs.dirs) }}
     steps:
       - uses: actions/checkout@v4
 
@@ -43,9 +17,4 @@ jobs:
         with:
           version: v1.0.0
 
-      - name: verifying ${{ matrix.project }}
-        working-directory: ${{ matrix.project }}
-        run: make
-        env:
-          ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
-          ETH_RPC_URL: ${{ secrets.ETH_RPC_URL }}
+      - run: make
