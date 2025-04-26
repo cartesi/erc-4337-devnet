@@ -1,0 +1,9 @@
+all: verify
+
+build:
+	@cannon build --write-deployments deployments
+
+verify: build
+	@jq -r '"\(.contractName) \(.address)"' deployments/*.json | sort | uniq | diff -u expected -
+
+.PHONY: build verify all
