@@ -1,0 +1,23 @@
+name = "zerodev-factory-staker"
+version = "3"
+description = "Kernel ERC-4337 infrastructure"
+
+[var.Settings]
+owner = "0x9775137314fE595c943712B0b336327dfa80aE8A"
+
+[pull.entryPoint]
+source = "eth-infinitism-entrypoint:0.7.0"
+
+[deploy.FactoryStaker]
+artifact = "FactoryStaker"
+args = ["<%= settings.owner %>"]
+create2 = true
+salt = "<%= zeroHash %>"
+ifExists = "continue"
+
+[invoke.stake]
+target = "FactoryStaker"
+func = "stake(address,uint32)"
+args = ["<%= entryPoint.EntryPoint.address %>", 86400]
+from = "<%= settings.owner %>"
+value = "100000000000000000"
