@@ -2,6 +2,7 @@ FOUNDRY_VERSION := 1.0.0
 
 ORGS += eth-infinitism
 ORGS += pimlico
+ORGS += zerodev
 
 .PHONY: all $(ORGS)
 
@@ -12,3 +13,5 @@ install-foundry:
 
 $(ORGS):
 	@$(MAKE) -C $@
+
+zerodev: eth-infinitism
