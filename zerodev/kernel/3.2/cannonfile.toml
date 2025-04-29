@@ -1,0 +1,29 @@
+name = "zerodev-kernel"
+version = "3.2"
+description = "Kernel ERC-4337 infrastructure"
+
+[pull.entryPoint]
+source = "eth-infinitism-entrypoint:0.7.0"
+
+[pull.factoryStaker]
+source = "zerodev-factory-staker:3"
+
+[deploy.Kernel]
+artifact = "Kernel"
+args = ["<%= entryPoint.EntryPoint.address %>"]
+create2 = true
+salt = "<%= zeroHash %>"
+ifExists = "continue"
+
+[deploy.KernelFactory]
+artifact = "KernelFactory"
+args = ["<%= contracts.Kernel.address %>"]
+create2 = true
+salt = "<%= zeroHash %>"
+ifExists = "continue"
+
+[invoke.registerFactory]
+target = "factoryStaker.FactoryStaker"
+func = "approveFactory(address,bool)"
+args = ["<%= contracts.KernelFactory.address %>", true]
+from = "<%= imports.factoryStaker.settings.owner %>"
