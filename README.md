@@ -31,6 +31,7 @@ make
 - zerodev-factory-staker:3 ([source](https://github.com/zerodevapp/kernel/releases/tag/v3.0))
 - zerodev-kernel:3.0 ([source](https://github.com/zerodevapp/kernel/releases/tag/v3.0))
 - zerodev-kernel:3.1 ([source](https://github.com/zerodevapp/kernel/releases/tag/v3.1))
+- zerodev-kernel:3.2 ([source](https://github.com/zerodevapp/kernel/releases/tag/v3.2))
 
 ## Useful tools
 
