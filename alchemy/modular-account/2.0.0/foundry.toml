@@ -1,0 +1,27 @@
+[profile.default]
+solc = '0.8.26'
+via_ir = true
+evm_version = 'paris'
+src = 'src'
+libs = ['lib']
+out = 'out'
+optimizer = true
+optimizer_runs = 10000000
+auto_detect_solc = false
+cbor_metadata = true
+use_literal_content = false
+bytecode_hash = "none"
+auto_detect_remappings = false
+
+additional_compiler_profiles = [
+    { name = "optimized-build", optimizer_runs = 50000 },
+    { name = "optimized-build-standalone", optimizer_runs = 10000000 },
+    { name = "optimized-build-sma-storage", optimizer_runs = 15000 },
+]
+
+compilation_restrictions = [
+    { paths = "src/account/ModularAccount.sol", optimizer_runs = 50000 },
+    { paths = "src/account/SemiModularAccountBytecode.sol", optimizer_runs = 50000 },
+    { paths = "src/account/SemiModularAccount7702.sol", optimizer_runs = 50000 },
+    { paths = "src/account/SemiModularAccountStorageOnly.sol", optimizer_runs = 15000 },
+]
