@@ -12,9 +12,12 @@ jobs:
       - name: Install Cannon
         run: npm install -g @usecannon/cli
 
-      - name: Install Foundry
-        uses: foundry-rs/foundry-toolchain@v1
-        with:
-          version: v1.0.0
+      - name: Install foundryup
+        run: |
+          curl -L https://foundry.paradigm.xyz | bash
+          echo "$HOME/.config/.foundry/bin" >> "$GITHUB_PATH"
+
+      - name: Install foundry
+        run: make install-foundry
 
       - run: make
