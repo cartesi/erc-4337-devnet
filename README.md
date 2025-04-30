@@ -24,17 +24,17 @@ make
 
 ## Cannon packages
 
-- eth-infinitism-entrypoint:0.6.0 ([source](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.6.0))
-- eth-infinitism-entrypoint:0.7.0 ([source](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.7.0))
-- eth-infinitism-entrypoint:0.8.0 ([source](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0))
-- pimlico-entrypoint-simulations:0.7.0 ([source](https://github.com/pimlicolabs/contracts))
-- zerodev-factory-staker:3 ([source](https://github.com/zerodevapp/kernel/releases/tag/v3.0))
-- zerodev-kernel:3.0 ([source](https://github.com/zerodevapp/kernel/releases/tag/v3.0))
-- zerodev-kernel:3.1 ([source](https://github.com/zerodevapp/kernel/releases/tag/v3.1))
-- zerodev-kernel:3.2 ([source](https://github.com/zerodevapp/kernel/releases/tag/v3.2))
-- alchemy-light-account:1.1.0 ([source](https://github.com/alchemyplatform/light-account/releases/tag/v1.1.0))
-- alchemy-light-account:2.0.0 ([source](https://github.com/alchemyplatform/light-account/releases/tag/v2.0.0))
-- alchemy-modular-account:2.0.0 ([source](https://github.com/alchemyplatform/modular-account/releases/tag/v2.0.0))
+- [eth-infinitism-entrypoint:0.6.0](https://usecannon.com/packages/eth-infinitism-entrypoint/0.6.0/13370-main) ([source](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.6.0))
+- [eth-infinitism-entrypoint:0.7.0](https://usecannon.com/packages/eth-infinitism-entrypoint/0.7.0/13370-main) ([source](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.7.0))
+- [eth-infinitism-entrypoint:0.8.0](https://usecannon.com/packages/eth-infinitism-entrypoint/0.8.0/13370-main) ([source](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0))
+- [pimlico-entrypoint-simulations:0.7.0](https://usecannon.com/packages/pimlico-entrypoint-simulations/0.7.0/13370-main) ([source](https://github.com/pimlicolabs/contracts))
+- [zerodev-factory-staker:3](https://usecannon.com/packages/zerodev-factory-staker/3/13370-main) ([source](https://github.com/zerodevapp/kernel/releases/tag/v3.0))
+- [zerodev-kernel:3.0](https://usecannon.com/packages/zerodev-kernel/3.0/13370-main) ([source](https://github.com/zerodevapp/kernel/releases/tag/v3.0))
+- [zerodev-kernel:3.1](https://usecannon.com/packages/zerodev-kernel/3.1/13370-main) ([source](https://github.com/zerodevapp/kernel/releases/tag/v3.1))
+- [zerodev-kernel:3.2](https://usecannon.com/packages/zerodev-kernel/3.2/13370-main) ([source](https://github.com/zerodevapp/kernel/releases/tag/v3.2))
+- [alchemy-light-account:1.1.0](https://usecannon.com/packages/alchemy-light-account/1.1.0/13370-main) ([source](https://github.com/alchemyplatform/light-account/releases/tag/v1.1.0))
+- [alchemy-light-account:2.0.0](https://usecannon.com/packages/alchemy-light-account/2.0.0/13370-main) ([source](https://github.com/alchemyplatform/light-account/releases/tag/v2.0.0))
+- [alchemy-modular-account:2.0.0](https://usecannon.com/packages/alchemy-modular-account/2.0.0/13370-main) ([source](https://github.com/alchemyplatform/modular-account/releases/tag/v2.0.0))
 
 ## Useful tools
 
