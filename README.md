@@ -14,6 +14,14 @@ The contracts are usually downloaded from verified deployments from ethereum, us
 
 The local deployment is handled using [cannon](https://usecannon.com), which provides more composability.
 
+## Building
+
+```shell
+npm install -g @usecannon/cli
+make install-foundry
+make
+```
+
 ## Contracts
 
 | Name | Version | Address | Original Repo | Cannon Package |
