@@ -1,0 +1,112 @@
+name = "alchemy-modular-account"
+version = "2.0.0"
+description = "Alchemy Modular Account"
+
+[var.Settings]
+owner = "0xDdF32240B4ca3184De7EC8f0D5Aba27dEc8B7A5C"
+
+[pull.entrypoint]
+source = "eth-infinitism-entrypoint:0.7.0"
+
+[deploy.ExecutionInstallDelegate]
+artifact = "ExecutionInstallDelegate"
+create2 = true
+salt = "0x0000000000000000000000000000000000000000f025c5072701275be9e38d72"
+ifExists = "continue"
+
+[deploy.ModularAccount]
+artifact = "ModularAccount"
+args = [
+    "<%= entrypoint.EntryPoint.address %>",
+    "<%= contracts.ExecutionInstallDelegate.address %>"
+]
+create2 = true
+salt = "0x000000000000000000000000000000000000000026d724645fb0ae7579e98c62"
+ifExists = "continue"
+
+[deploy.SemiModularAccountBytecode]
+artifact = "SemiModularAccountBytecode"
+args = [
+    "<%= entrypoint.EntryPoint.address %>",
+    "<%= contracts.ExecutionInstallDelegate.address %>"
+]
+create2 = true
+salt = "0x0000000000000000000000000000000000000000d5ec084a831ef551abb05bc7"
+ifExists = "continue"
+
+[deploy.SemiModularAccount7702]
+artifact = "SemiModularAccount7702"
+args = [
+    "<%= entrypoint.EntryPoint.address %>",
+    "<%= contracts.ExecutionInstallDelegate.address %>"
+]
+create2 = true
+salt = "0x560d523fd8061660acf1839f13f8550b0910ad69cf928acafea0cd76936f3800"
+ifExists = "continue"
+
+[deploy.SemiModularAccountStorageOnly]
+artifact = "SemiModularAccountStorageOnly"
+args = [
+    "<%= entrypoint.EntryPoint.address %>",
+    "<%= contracts.ExecutionInstallDelegate.address %>"
+]
+create2 = true
+salt = "0x0000000000000000000000000000000000000000927a62077526ff6711e02ca3"
+ifExists = "continue"
+
+[deploy.SingleSignerValidationModule]
+artifact = "SingleSignerValidationModule"
+create2 = true
+salt = "0x000000000000000000000000000000000000000021f94598c3ee4349df132fca"
+ifExists = "continue"
+
+[deploy.WebAuthnValidationModule]
+artifact = "WebAuthnValidationModule"
+create2 = true
+salt = "0x0000000000000000000000000000000000000000d6fcd2d895007352212d092c"
+ifExists = "continue"
+
+[deploy.AccountFactory]
+artifact = "AccountFactory"
+args = [
+    "<%= entrypoint.EntryPoint.address %>",
+    "<%= contracts.ModularAccount.address %>",
+    "<%= contracts.SemiModularAccountBytecode.address %>",
+    "<%= contracts.SingleSignerValidationModule.address %>",
+    "<%= contracts.WebAuthnValidationModule.address %>",
+    "<%= settings.owner %>"
+]
+create2 = true
+salt = "0x0000000000000000000000000000000000000000620c1b8944951c0586e48adb"
+ifExists = "continue"
+
+[deploy.AllowlistModule]
+artifact = "AllowlistModule"
+create2 = true
+salt = "0x000000000000000000000000000000000000000053327e2d907120557b948d91"
+ifExists = "continue"
+
+[deploy.NativeTokenLimitModule]
+artifact = "NativeTokenLimitModule"
+create2 = true
+salt = "0x0000000000000000000000000000000000000000cd5d40e42713cb5f4b81d828"
+ifExists = "continue"
+
+[deploy.PaymasterGuardModule]
+artifact = "PaymasterGuardModule"
+create2 = true
+salt = "0x00000000000000000000000000000000000000001c0a1f2f2ba4a325db87a323"
+ifExists = "continue"
+
+[deploy.TimeRangeModule]
+artifact = "TimeRangeModule"
+create2 = true
+salt = "0x0000000000000000000000000000000000000000500e1dfd80787c342371e513"
+ifExists = "continue"
+
+[invoke.stake]
+target = "AccountFactory"
+func = "addStake(uint32)"
+args = [86400]
+from = "<%= settings.owner %>"
+value = "100000000000000000"
