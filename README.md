@@ -22,10 +22,7 @@ make install-foundry
 make
 ```
 
-## Contracts
-
-| Name | Version | Address | Original Repo | Cannon Package |
-| ---- | ------- | ------- | ------------- | -------------- |
+## Cannon packages
 
 ## Useful tools
 
