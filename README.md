@@ -53,6 +53,9 @@ make
 - [alchemy-light-account:1.1.0](https://usecannon.com/packages/alchemy-light-account/1.1.0/13370-main) ([source](https://github.com/alchemyplatform/light-account/releases/tag/v1.1.0))
 - [alchemy-light-account:2.0.0](https://usecannon.com/packages/alchemy-light-account/2.0.0/13370-main) ([source](https://github.com/alchemyplatform/light-account/releases/tag/v2.0.0))
 - [alchemy-modular-account:2.0.0](https://usecannon.com/packages/alchemy-modular-account/2.0.0/13370-main) ([source](https://github.com/alchemyplatform/modular-account/releases/tag/v2.0.0))
+- [biconomy-kee:0.0.4](https://usecannon.com/packages/biconomy-mee/0.0.4/13370-main) ([source](https://github.com/bcnmy/mee-contracts/tree/v0.0.4))
+- [biconomy-nexus:1.0.2](https://usecannon.com/packages/biconomy-nexux/1.0.2/13370-main) ([source](https://github.com/bcnmy/nexus/tree/v1.0.2))
+- [biconomy-nexus:1.2.0](https://usecannon.com/packages/biconomy-nexux/1.2.0/13370-main) ([source](https://github.com/bcnmy/nexus/tree/v1.2.0))
 
 ## Useful tools
 
