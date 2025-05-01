@@ -1,0 +1,9 @@
+openzeppelin/=node_modules/@openzeppelin/contracts/
+account-abstraction/=node_modules/account-abstraction/contracts/
+erc7739Validator/=node_modules/erc7739-validator-base/src/
+solady/=node_modules/solady/src/
+EnumerableSet4337/=node_modules/enumerablemap4337/src/
+byteslib/=node_modules/solidity-bytes-utils/contracts/
+rlp-reader/=node_modules/Solidity-RLP/contracts/
+erc7579/=node_modules/erc7579/src/
+@openzeppelin/=node_modules/@openzeppelin/

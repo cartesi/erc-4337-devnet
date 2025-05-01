@@ -1,0 +1,15 @@
+[profile.default]
+src = "contracts"
+out = "out"
+libs = ["lib"]
+auto_detect_remappings = false
+auto_detect_solc = false
+solc_version = "0.8.27"
+evm_version = "cancun"
+via_ir = true
+cbor_metadata = true
+use_literal_content = false
+bytecode_hash = "none"
+optimizer = true
+optimizer_runs = 777
+libraries = []
