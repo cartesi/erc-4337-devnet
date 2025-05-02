@@ -1,0 +1,9 @@
+name = "rhinestone-registry"
+version = "1.0.0"
+description = "Rhinestone ERC-4337 infrastructure"
+
+[deploy.Registry]
+artifact = "Registry"
+create2 = "0x914d7Fec6aaC8cd542e72Bca78B30650d45643d7"
+salt = "0x0000000000000000000000000000000000000000d7f995ff1ea60f02e52877f7"
+ifExists = "continue"

@@ -5,6 +5,7 @@ ORGS += pimlico
 ORGS += daimo
 ORGS += zerodev
 ORGS += alchemy
+ORGS += rhinestone
 ORGS += biconomy
 
 .PHONY: all $(ORGS)
@@ -21,4 +22,4 @@ zerodev: eth-infinitism daimo
 
 alchemy: eth-infinitism
 
-biconomy: eth-infinitism
+biconomy: eth-infinitism rhinestone
