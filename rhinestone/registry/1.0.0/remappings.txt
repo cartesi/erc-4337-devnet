@@ -1,4 +1,4 @@
-forge-std/=node_modules/forge-std/src/
+forge-std/=lib/forge-std/src/
 @safe-global/=node_modules/@safe-global/
 ds-test/=node_modules/ds-test/src/
 safe-singleton-deployer/=node_modules/safe-singleton-deployer/src/
