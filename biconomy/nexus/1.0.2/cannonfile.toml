@@ -8,6 +8,9 @@ owner = "0x129443cA2a9Dec2020808a2868b38dDA457eaCC7"
 [pull.entryPoint]
 source = "eth-infinitism-entrypoint:0.7.0"
 
+[pull.registry]
+source = "rhinestone-registry:1.0.0"
+
 [deploy.Nexus]
 artifact = "Nexus"
 args = ["<%= entryPoint.EntryPoint.address %>"]
@@ -29,4 +32,23 @@ ifExists = "continue"
 artifact = "NexusBootstrap"
 create2 = true
 salt = "0x00000000000000000000000000000000000000005e620e103460b60399842649"
+ifExists = "continue"
+
+[deploy.K1Validator]
+artifact = "K1Validator"
+create2 = true
+salt = "0x000000000000000000000000000000000000000014fedeb9e1c61d030943b78e"
+ifExists = "continue"
+
+[deploy.K1ValidatorFactory]
+artifact = "K1ValidatorFactory"
+args = [
+    "<%= contracts.Nexus.address %>",
+    "<%= settings.owner %>",
+    "<%= contracts.K1Validator.address %>",
+    "<%= contracts.NexusBootstrap.address %>",
+    "0x000000000069E2a187AEFFb852bF3cCdC95151B2"
+]
+create2 = true
+salt = "0x0000000000000000000000000000000000000000ab83b9fa3c3b1b041f8fa33b"
 ifExists = "continue"
