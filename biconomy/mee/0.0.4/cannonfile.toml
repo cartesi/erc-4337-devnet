@@ -1,0 +1,9 @@
+name = "biconomy-mee"
+version = "0.0.4"
+description = "Nexus ERC-4337 infrastructure"
+
+[deploy.K1MeeValidator]
+artifact = "K1MeeValidator"
+create2 = true
+salt = "0x000000000000000000000000000000000000000047819504fd5006001ee95238"
+ifExists = "continue"

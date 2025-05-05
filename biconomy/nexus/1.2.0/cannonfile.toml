@@ -1,0 +1,44 @@
+name = "biconomy-nexus"
+version = "1.2.0"
+description = "Nexus ERC-4337 infrastructure"
+
+[var.Settings]
+owner = "0x129443cA2a9Dec2020808a2868b38dDA457eaCC7"
+initData = "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+
+[pull.entryPoint]
+source = "eth-infinitism-entrypoint:0.7.0"
+
+[pull.validator]
+source = "biconomy-mee:0.0.4"
+
+[deploy.Nexus]
+artifact = "Nexus"
+args = [
+    "<%= entryPoint.EntryPoint.address %>",
+    "<%= validator.K1MeeValidator.address %>",
+    "<%= settings.initData %>"
+]
+create2 = true
+salt = "0x0000000000000000000000000000000000000000f036b687a1f82003988bd953"
+ifExists = "continue"
+
+[deploy.NexusAccountFactory]
+artifact = "NexusAccountFactory"
+args = [
+    "<%= contracts.Nexus.address %>",
+    "<%= settings.owner %>"
+]
+create2 = true
+salt = "0x0000000000000000000000000000000000000000e289724d34a3660389fc1ab0"
+ifExists = "continue"
+
+[deploy.NexusBootstrap]
+artifact = "NexusBootstrap"
+args = [
+    "<%= validator.K1MeeValidator.address %>",
+    "<%= settings.initData %>"
+]
+create2 = true
+salt = "0x000000000000000000000000000000000000000069b8a8e8fec67700be0ca325"
+ifExists = "continue"
