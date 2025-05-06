@@ -1,12 +1,12 @@
 name = "zerodev-kernel"
-version = "3.0"
+version = "0.3.2"
 description = "Kernel ERC-4337 infrastructure"
 
 [pull.entryPoint]
 source = "eth-infinitism-entrypoint:0.7.0"
 
 [pull.factoryStaker]
-source = "zerodev-factory-staker:3"
+source = "zerodev-factory-staker:0.3"
 
 [deploy.Kernel]
 artifact = "Kernel"
@@ -18,12 +18,6 @@ ifExists = "continue"
 [deploy.KernelFactory]
 artifact = "KernelFactory"
 args = ["<%= contracts.Kernel.address %>"]
-create2 = true
-salt = "<%= zeroHash %>"
-ifExists = "continue"
-
-[deploy.ECDSAValidator]
-artifact = "ECDSAValidator"
 create2 = true
 salt = "<%= zeroHash %>"
 ifExists = "continue"

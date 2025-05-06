@@ -1,12 +1,12 @@
 name = "zerodev-kernel"
-version = "3.1"
+version = "0.3.0"
 description = "Kernel ERC-4337 infrastructure"
 
 [pull.entryPoint]
 source = "eth-infinitism-entrypoint:0.7.0"
 
 [pull.factoryStaker]
-source = "zerodev-factory-staker:3"
+source = "zerodev-factory-staker:0.3"
 
 [deploy.Kernel]
 artifact = "Kernel"
