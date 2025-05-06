@@ -1,4 +1,4 @@
-VERSIONS += 3
+VERSIONS += 0.3
 
 .PHONY: all $(VERSIONS)
 all: $(VERSIONS)

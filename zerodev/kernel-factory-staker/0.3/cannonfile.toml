@@ -1,5 +1,5 @@
 name = "zerodev-factory-staker"
-version = "3"
+version = "0.3"
 description = "Kernel ERC-4337 infrastructure"
 
 [var.Settings]
