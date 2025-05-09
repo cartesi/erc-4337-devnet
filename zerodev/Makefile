@@ -2,6 +2,7 @@ PROJECTS += kernel
 PROJECTS += kernel-call-policy
 PROJECTS += kernel-factory-staker
 PROJECTS += kernel-gas-policy
+PROJECTS += kernel-rate-limit-policy
 PROJECTS += kernel-sudo-policy
 PROJECTS += kernel-timestamp-policy
 
