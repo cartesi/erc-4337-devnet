@@ -1,0 +1,9 @@
+name = "zerodev-kernel-call-policy"
+version = "0.0.2"
+description = "Kernel ERC-4337 infrastructure"
+
+[deploy.CallPolicy]
+artifact = "CallPolicy"
+create2 = true
+salt = "<%= zeroHash %>"
+ifExists = "continue"
