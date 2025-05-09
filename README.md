@@ -31,7 +31,7 @@ make
 - [eth-infinitism-simple-account:0.7.0](https://usecannon.com/packages/eth-infinitism-simple-account/0.7.0/13370-main) ([source](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.7.0))
 - [eth-infinitism-simple-account:0.8.0](https://usecannon.com/packages/eth-infinitism-simple-account/0.8.0/13370-main) ([source](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0))
 - [pimlico-entrypoint-simulations:0.7.0](https://usecannon.com/packages/pimlico-entrypoint-simulations/0.7.0/13370-main) ([source](https://github.com/pimlicolabs/contracts))
-- [zerodev-factory-staker:3](https://usecannon.com/packages/zerodev-factory-staker/3/13370-main) ([source](https://github.com/zerodevapp/kernel/releases/tag/v3.0))
+- [zerodev-factory-staker:0.3](https://usecannon.com/packages/zerodev-factory-staker/0.3/13370-main) ([source](https://github.com/zerodevapp/kernel/releases/tag/v3.0))
 - [zerodev-kernel:0.3.0](https://usecannon.com/packages/zerodev-kernel/0.3.0/13370-main) ([source](https://github.com/zerodevapp/kernel/releases/tag/v3.0))
 - [zerodev-kernel:0.3.1](https://usecannon.com/packages/zerodev-kernel/0.3.1/13370-main) ([source](https://github.com/zerodevapp/kernel/releases/tag/v3.1))
 - [zerodev-kernel:0.3.2](https://usecannon.com/packages/zerodev-kernel/0.3.2/13370-main) ([source](https://github.com/zerodevapp/kernel/releases/tag/v3.2))
