@@ -45,6 +45,7 @@ make
 - [zerodev-kernel-timestamp-policy:0.0.1](https://usecannon.com/packages/zerodev-kernel-timestamp-policy/0.0.1/13370-main) ([source](https://github.com/zerodevapp/kernel-7579-plugins))
 - [zerodev-kernel-ratelimit-policy:0.0.1](https://usecannon.com/packages/zerodev-kernel-ratelimit-policy/0.0.1/13370-main) ([source](https://github.com/zerodevapp/kernel-7579-plugins))
 - [zerodev-kernel-signature-policy:0.0.1](https://usecannon.com/packages/zerodev-kernel-signature-policy/0.0.1/13370-main) ([source](https://github.com/zerodevapp/kernel-7579-plugins))
+- [zerodev-kernel-ecdsa-signer:0.0.1](https://usecannon.com/packages/zerodev-kernel-ecdsa-signer/0.0.1/13370-main) ([source](https://github.com/zerodevapp/kernel-7579-plugins))
 - [alchemy-light-account:1.1.0](https://usecannon.com/packages/alchemy-light-account/1.1.0/13370-main) ([source](https://github.com/alchemyplatform/light-account/releases/tag/v1.1.0))
 - [alchemy-light-account:2.0.0](https://usecannon.com/packages/alchemy-light-account/2.0.0/13370-main) ([source](https://github.com/alchemyplatform/light-account/releases/tag/v2.0.0))
 - [alchemy-modular-account:2.0.0](https://usecannon.com/packages/alchemy-modular-account/2.0.0/13370-main) ([source](https://github.com/alchemyplatform/modular-account/releases/tag/v2.0.0))
