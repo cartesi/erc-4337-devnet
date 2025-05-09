@@ -1,0 +1,9 @@
+name = "zerodev-kernel-sudo-policy"
+version = "0.0.1"
+description = "Kernel ERC-4337 infrastructure"
+
+[deploy.SudoPolicy]
+artifact = "SudoPolicy"
+create2 = true
+salt = "<%= zeroHash %>"
+ifExists = "continue"

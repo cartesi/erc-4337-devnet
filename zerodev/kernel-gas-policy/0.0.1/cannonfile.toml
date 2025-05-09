@@ -1,0 +1,9 @@
+name = "zerodev-kernel-gas-policy"
+version = "0.0.1"
+description = "Kernel ERC-4337 infrastructure"
+
+[deploy.GasPolicy]
+artifact = "GasPolicy"
+create2 = true
+salt = "<%= zeroHash %>"
+ifExists = "continue"

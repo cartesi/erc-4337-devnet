@@ -1,0 +1,9 @@
+name = "zerodev-kernel-authn-validator"
+version = "0.0.1"
+description = "Kernel ERC-4337 infrastructure"
+
+[deploy.WebAuthnValidator]
+artifact = "WebAuthnValidator"
+create2 = true
+salt = "<%= zeroHash %>"
+ifExists = "continue"
