@@ -1,0 +1,9 @@
+name = "zerodev-kernel-ratelimit-policy"
+version = "0.0.1"
+description = "Kernel ERC-4337 infrastructure"
+
+[deploy.RateLimitPolicy]
+artifact = "RateLimitPolicy"
+create2 = true
+salt = "<%= zeroHash %>"
+ifExists = "continue"
