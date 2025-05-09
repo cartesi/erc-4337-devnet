@@ -1,4 +1,5 @@
 PROJECTS += kernel
+PROJECTS += kernel-call-policy
 PROJECTS += kernel-factory-staker
 PROJECTS += kernel-sudo-policy
 
