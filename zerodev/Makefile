@@ -8,6 +8,7 @@ PROJECTS += kernel-signature-policy
 PROJECTS += kernel-sudo-policy
 PROJECTS += kernel-timestamp-policy
 PROJECTS += kernel-web-authn-signer
+PROJECTS += kernel-web-authn-validator
 
 .PHONY: all $(PROJECTS)
 all: $(PROJECTS)

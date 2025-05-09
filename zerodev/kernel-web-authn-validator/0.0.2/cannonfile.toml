@@ -1,0 +1,12 @@
+name = "zerodev-kernel-authn-validator"
+version = "0.0.2"
+description = "Kernel ERC-4337 infrastructure"
+
+[pull.p256Verifier]
+source = "daimo-p256-verifier:1.0.0"
+
+[deploy.WebAuthnValidator]
+artifact = "WebAuthnValidator"
+create2 = true
+salt = "<%= zeroHash %>"
+ifExists = "continue"
