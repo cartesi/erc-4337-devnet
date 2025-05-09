@@ -3,6 +3,7 @@ PROJECTS += kernel-call-policy
 PROJECTS += kernel-factory-staker
 PROJECTS += kernel-gas-policy
 PROJECTS += kernel-sudo-policy
+PROJECTS += kernel-timestamp-policy
 
 .PHONY: all $(PROJECTS)
 all: $(PROJECTS)
