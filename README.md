@@ -48,6 +48,8 @@ make
 - [zerodev-kernel-ecdsa-signer:0.0.1](https://usecannon.com/packages/zerodev-kernel-ecdsa-signer/0.0.1/13370-main) ([source](https://github.com/zerodevapp/kernel-7579-plugins))
 - [zerodev-kernel-web-authn-signer:0.0.1](https://usecannon.com/packages/zerodev-kernel-web-authn-signer/0.0.1/13370-main) ([source](https://github.com/zerodevapp/kernel-7579-plugins))
 - [zerodev-kernel-web-authn-signer:0.0.2](https://usecannon.com/packages/zerodev-kernel-web-authn-signer/0.0.2/13370-main) ([source](https://github.com/zerodevapp/kernel-7579-plugins))
+- [zerodev-kernel-authn-validator:0.0.1](https://usecannon.com/packages/zerodev-kernel-authn-validator/0.0.1/13370-main) ([source](https://github.com/zerodevapp/kernel-7579-plugins))
+- [zerodev-kernel-authn-validator:0.0.2](https://usecannon.com/packages/zerodev-kernel-authn-validator/0.0.2/13370-main) ([source](https://github.com/zerodevapp/kernel-7579-plugins))
 - [alchemy-light-account:1.1.0](https://usecannon.com/packages/alchemy-light-account/1.1.0/13370-main) ([source](https://github.com/alchemyplatform/light-account/releases/tag/v1.1.0))
 - [alchemy-light-account:2.0.0](https://usecannon.com/packages/alchemy-light-account/2.0.0/13370-main) ([source](https://github.com/alchemyplatform/light-account/releases/tag/v2.0.0))
 - [alchemy-modular-account:2.0.0](https://usecannon.com/packages/alchemy-modular-account/2.0.0/13370-main) ([source](https://github.com/alchemyplatform/modular-account/releases/tag/v2.0.0))
