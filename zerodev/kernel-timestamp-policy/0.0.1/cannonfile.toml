@@ -1,0 +1,9 @@
+name = "zerodev-kernel-timestamp-policy"
+version = "0.0.1"
+description = "Kernel ERC-4337 infrastructure"
+
+[deploy.TimestampPolicy]
+artifact = "TimestampPolicy"
+create2 = true
+salt = "<%= zeroHash %>"
+ifExists = "continue"
