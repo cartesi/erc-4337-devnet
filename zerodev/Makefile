@@ -7,6 +7,7 @@ PROJECTS += kernel-rate-limit-policy
 PROJECTS += kernel-signature-policy
 PROJECTS += kernel-sudo-policy
 PROJECTS += kernel-timestamp-policy
+PROJECTS += kernel-web-authn-signer
 
 .PHONY: all $(PROJECTS)
 all: $(PROJECTS)
