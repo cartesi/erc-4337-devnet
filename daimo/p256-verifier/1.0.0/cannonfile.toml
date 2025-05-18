@@ -1,0 +1,9 @@
+name = "daimo-p256-verifier"
+version = "1.0.0"
+description = "P256 Verifier"
+
+[deploy.P256Verifier]
+artifact = "P256Verifier"
+create2 = true
+salt = "<%= zeroHash %>"
+ifExists = "continue"

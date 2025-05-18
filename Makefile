@@ -2,6 +2,7 @@ FOUNDRY_VERSION := 1.0.0
 
 ORGS += eth-infinitism
 ORGS += pimlico
+ORGS += daimo
 ORGS += zerodev
 ORGS += alchemy
 
@@ -15,6 +16,6 @@ install-foundry:
 $(ORGS):
 	@$(MAKE) -C $@
 
-zerodev: eth-infinitism
+zerodev: eth-infinitism daimo
 
 alchemy: eth-infinitism
