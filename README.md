@@ -12,17 +12,23 @@ We however take a different approach.
 As most contracts use [deterministic deployment](https://book.getfoundry.sh/guides/deterministic-deployments-using-create2), we compile all smart contracts from source using the same settings as deployed to the live network, and deploy using the same salt, resulting in the same address.
 The contracts are usually downloaded from verified deployments from ethereum, using the `forge clone` command.
 
-The local deployment is handled using [cannon](https://usecannon.com), which provides more composability.
+The local deployment is handled using [Forge scripts](https://www.getfoundry.sh/forge/scripting).
 
 ## Building
 
 ```shell
-npm install -g @usecannon/cli
-make install-foundry
-make
+make install-foundry  # install the supported Foundry version
+make build -j         # build contracts with Forge using as many threads as possible
 ```
 
-## Cannon packages
+## Deploying
+
+```shell
+anvil &               # spawn an Anvil node
+make deploy           # deploy the contracts to Anvil using Forge scripts
+```
+
+## [Cannon](https://www.getfoundry.sh/forge/scripting) packages (legacy)
 
 - [eth-infinitism-entrypoint:0.6.0](https://usecannon.com/packages/eth-infinitism-entrypoint/0.6.0/13370-main) ([source](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.6.0))
 - [eth-infinitism-entrypoint:0.7.0](https://usecannon.com/packages/eth-infinitism-entrypoint/0.7.0/13370-main) ([source](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.7.0))

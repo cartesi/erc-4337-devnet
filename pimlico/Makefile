@@ -1,7 +1,3 @@
 PROJECTS += entrypoint-simulations
 
-.PHONY: all $(PROJECTS)
-all: $(PROJECTS)
-
-$(PROJECTS):
-	@$(MAKE) -C $@
+include ../internal/org.mk

@@ -10,10 +10,6 @@ PROJECTS += kernel-timestamp-policy
 PROJECTS += kernel-web-authn-signer
 PROJECTS += kernel-web-authn-validator
 
-.PHONY: all $(PROJECTS)
-all: $(PROJECTS)
+include ../internal/org.mk
 
-$(PROJECTS):
-	@$(MAKE) -C $@
-
-kernel: kernel-factory-staker
+deploy-kernel: deploy-kernel-factory-staker

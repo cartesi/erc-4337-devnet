@@ -1,10 +1,6 @@
 PROJECTS += entrypoint
 PROJECTS += simple-account
 
-.PHONY: all $(PROJECTS)
-all: $(PROJECTS)
+include ../internal/org.mk
 
-$(PROJECTS):
-	@$(MAKE) -C $@
-
-simple-account: entrypoint
+deploy-simple-account: deploy-entrypoint

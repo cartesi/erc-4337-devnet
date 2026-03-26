@@ -1,0 +1,13 @@
+ANVIL_DEPLOYMENTS := deployments/31337/*.json
+DEPLOY_SCRIPT := ./script/Deploy.s.sol:DeployScript
+RPC_URL := http://127.0.0.1:8545
+SENDER := 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+build:
+	@forge build
+
+deploy:
+	@forge script $(DEPLOY_SCRIPT) --rpc-url $(RPC_URL) --unlocked --sender $(SENDER) --broadcast
+	@jq -r '"\(.contractName) \(.address)"' $(ANVIL_DEPLOYMENTS) | sort | uniq | diff -u expected -
+
+.PHONY: build deploy
