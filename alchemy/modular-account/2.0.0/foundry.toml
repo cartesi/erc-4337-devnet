@@ -25,3 +25,10 @@ compilation_restrictions = [
     { paths = "src/account/SemiModularAccount7702.sol", optimizer_runs = 50000 },
     { paths = "src/account/SemiModularAccountStorageOnly.sol", optimizer_runs = 15000 },
 ]
+
+allow_paths = ["../../../internal"]
+fs_permissions = [
+    { access = "read-write", path = "deployments" },
+    { access = "read", path = "../../../eth-infinitism/entrypoint/0.7/deployments" },
+    { access = "read", path = "out" },
+]

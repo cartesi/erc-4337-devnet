@@ -1,8 +1,7 @@
 PROJECTS += light-account
 PROJECTS += modular-account
+PROJECTS += semi-modular-account-storage-only
 
-.PHONY: all $(PROJECTS)
-all: $(PROJECTS)
+include ../internal/org.mk
 
-$(PROJECTS):
-	@$(MAKE) -C $@
+deploy-semi-modular-account-storage-only: deploy-modular-account

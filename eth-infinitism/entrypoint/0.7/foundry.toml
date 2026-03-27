@@ -8,3 +8,8 @@ via_ir = true
 optimizer = true
 optimizer_runs = 1000000
 libraries = []
+allow_paths = ["../../../internal"]
+fs_permissions = [
+    { access = "read-write", path = "deployments" },
+    { access = "read", path = "out" },
+]

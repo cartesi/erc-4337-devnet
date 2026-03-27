@@ -13,3 +13,9 @@ bytecode_hash = "ipfs"
 optimizer = true
 optimizer_runs = 999999
 libraries = []
+allow_paths = ["../../../internal"]
+fs_permissions = [
+    { access = "read-write", path = "deployments" },
+    { access = "read", path = "data" },
+    { access = "read", path = "out" },
+]

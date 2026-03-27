@@ -1,7 +1,3 @@
 VERSIONS += 1.0.0
 
-.PHONY: all $(VERSIONS)
-all: $(VERSIONS)
-
-$(VERSIONS):
-	@$(MAKE) -C $@ -f ../../../Makefile.project
+include ../../internal/project.mk

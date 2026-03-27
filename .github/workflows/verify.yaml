@@ -7,17 +7,49 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Install Cannon
-        run: npm install -g @usecannon/cli
+      - uses: actions/checkout@v6
 
       - name: Install foundryup
         run: |
           curl -L https://foundry.paradigm.xyz | bash
           echo "$HOME/.config/.foundry/bin" >> "$GITHUB_PATH"
 
-      - name: Install foundry
+      - name: Install Foundry
         run: make install-foundry
 
-      - run: make
+      - name: Try restoring svm from cache
+        id: svm-cache-restore
+        uses: actions/cache@v5
+        with:
+          key: svm-${{ hashFiles('internal/svm-version') }}
+          path: |
+            ~/.cargo/bin/svm
+            ~/.cargo/bin/solc
+
+      - name: Install svm (on cache miss)
+        if: steps.svm-cache-restore.outputs.cache-hit != 'true'
+        run: make install-svm
+
+      - name: Install solc
+        run: make install-solc
+
+      - name: Build contracts
+        run: make build -j
+
+      - name: Deploy contracts to Anvil
+        run: |
+          anvil --silent &
+          ANVIL_PID=$!
+          for i in $(seq 1 10); do
+            if cast chain-id 2>/dev/null
+            then
+              make deploy
+              kill $ANVIL_PID
+              exit 0
+            else
+              sleep 1
+            fi
+          done
+          kill $ANVIL_PID
+          echo "Anvil failed to start" >&2
+          exit 1
